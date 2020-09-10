@@ -107,16 +107,17 @@ $TextSecondary: #616980;
     }
   }
 
-  .OptionsContainer {
+  .SettingsContainer {
     width: 100%;
     min-height: 6vh;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     animation-name: appear;
     animation-duration: 1s;
 
-    .OptionsHeader {
+    .SettingsHeader {
       width: 80%;
       height: 6vh;
       display: flex;
@@ -135,7 +136,12 @@ $TextSecondary: #616980;
       svg {
         width: 1vw;
         margin-left: 1vh;
+        transform-origin: center;
       }
+    }
+
+    .Settings {
+      width: 80%;
     }
   }
 
@@ -198,7 +204,7 @@ $TextSecondary: #616980;
 
   .PassGen {
     .Container {
-      width: 70vw;
+      width: 80vw;
     }
   }
 
@@ -210,8 +216,8 @@ $TextSecondary: #616980;
     border-radius: 2vh;
   }
 
-  .OptionsContainer {
-    .OptionsHeader {
+  .SettingsContainer {
+    .SettingsHeader {
       svg {
         width: 3.2vw;
         margin-left: 1vh;
@@ -259,8 +265,8 @@ $TextSecondary: #616980;
     border-radius: 2vh;
   }
 
-  .OptionsContainer {
-    .OptionsHeader {
+  .SettingsContainer {
+    .SettingsHeader {
       svg {
         width: 2.1vw;
         margin-left: 1vh;
@@ -300,8 +306,8 @@ $TextSecondary: #616980;
     }
   }
 
-  .OptionsContainer {
-    .OptionsHeader {
+  .SettingsContainer {
+    .SettingsHeader {
       svg {
         width: 1.8vw;
         margin-left: 1vh;
