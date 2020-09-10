@@ -37,6 +37,18 @@ $TextSecondary: #616980;
     }
   }
 
+  @keyframes bounce {
+    50% {
+      transform: scale(1.2);
+    }
+    75% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   .PassGen {
     width: 100vw;
     height: 100vh;
@@ -142,6 +154,77 @@ $TextSecondary: #616980;
 
     .Settings {
       width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .Setting {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-items: center;
+
+    .CheckBox {
+      display: flex;
+      position: relative;
+      justify-items: center;
+
+      input {
+        // behavior
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        // size, position and appearance
+        width: 1vw;
+        height: 1vw;
+        position: absolute;
+        border-radius: 0.5vh;
+        background: $Background;
+
+        &:hover {
+          box-shadow: inset 0 0 0.2vh $Accent;
+        }
+        &:checked {
+          background: $Accent;
+          box-shadow: inset 0 0 0.2vh $AccentActive;
+        }
+      }
+
+      input:checked + svg {
+        display: block;
+        stroke: $Foreground;
+        animation: bounce 0.4s linear forwards 0.2s;
+      }
+
+      svg {
+        top: 0;
+        left: 0;
+        fill: none;
+        margin: 0;
+        width: 1vw;
+        height: 1vw;
+        display: none;
+        stroke: $Accent;
+        position: absolute;
+        stroke-width: 0.2vh;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      span {
+        margin: 0;
+        margin-left: 1.5vw;
+        font-size: 1.5vh;
+        font-weight: 600;
+        color: $TextSecondary;
+        font-family: "Montserrat", sans-serif;
+      }
     }
   }
 
@@ -225,6 +308,24 @@ $TextSecondary: #616980;
     }
   }
 
+  .Setting {
+    .CheckBox {
+      input {
+        width: 4vw;
+        height: 4vw;
+      }
+
+      svg {
+        width: 4vw;
+        height: 4vw;
+      }
+
+      span {
+        margin-left: 5vw;
+      }
+    }
+  }
+
   .Controllers {
     .Copy {
       width: 30%;
@@ -274,6 +375,25 @@ $TextSecondary: #616980;
     }
   }
 
+  .Setting {
+    .CheckBox {
+      input {
+        width: 2vw;
+        height: 2vw;
+      }
+
+      svg {
+        width: 2vw;
+        height: 2vw;
+      }
+
+      span {
+        // font-size: 2vw;
+        margin-left: 3vw;
+      }
+    }
+  }
+
   .Controllers {
     .Copy {
       width: 25%;
@@ -311,6 +431,25 @@ $TextSecondary: #616980;
       svg {
         width: 1.8vw;
         margin-left: 1vh;
+      }
+    }
+  }
+
+  .Setting {
+    .CheckBox {
+      input {
+        width: 2vw;
+        height: 2vw;
+      }
+
+      svg {
+        width: 2vw;
+        height: 2vw;
+      }
+
+      span {
+        // font-size: 2vw;
+        margin-left: 3vw;
       }
     }
   }
