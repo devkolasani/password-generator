@@ -156,13 +156,18 @@ $TextSecondary: #616980;
       width: 80%;
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
+      animation-name: appear;
+      animation-duration: 1s;
     }
   }
 
   .Setting {
+    height: 3vh;
     display: flex;
     position: relative;
     flex-direction: row;
+    align-items: center;
     justify-items: center;
 
     .CheckBox {
@@ -228,6 +233,66 @@ $TextSecondary: #616980;
     }
   }
 
+  #LengthSetting {
+    height: 9vh;
+
+    .Slider {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-items: flex-start;
+
+      span {
+        margin: 0;
+        width: 100%;
+        height: 4vh;
+        display: grid;
+        font-size: 1.5vh;
+        font-weight: 600;
+        color: $TextSecondary;
+        place-items: center flex-start;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .SliderInputContainer {
+        width: 100%;
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        input {
+          width: 80%;
+          height: 100%;
+          background: transparent;
+        }
+
+        .SliderChange {
+          width: 10%;
+          height: 6vh;
+          display: grid;
+          place-items: center;
+
+          svg {
+            width: 60%;
+            height: 60%;
+
+            path {
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              fill: $TextSecondary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .SliderInputContainer {
+  }
+
   .Controllers {
     width: 80%;
     height: 8vh;
@@ -279,9 +344,9 @@ $TextSecondary: #616980;
     }
 
     100% {
-      width: 70vw;
-      height: 20vh;
-      min-height: 20vh;
+      width: 80vw;
+      height: 26vh;
+      min-height: 26vh;
     }
   }
 
